@@ -1,0 +1,19 @@
+Text:
+
+[
+    {
+        "attrs": {
+            "guid": "/pages/home/files/video.mov",
+            "src": "http://html5video-block.test/media/pages/home/3445039357-1593530361/video.mov",
+            "id": "home/video.mov",
+            "ratio": 1.380281690140845,
+            "caption": "video caption",
+            "autoplay": true,
+            "loop": true,
+            "css": "small"
+        },
+        "content": "",
+        "id": "_ek0wcqeq2",
+        "type": "html5video"
+    }
+]
