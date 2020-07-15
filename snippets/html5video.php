@@ -7,9 +7,11 @@ $muted = $attrs->muted()->toBool();
 $controls = $attrs->controls()->toBool();
 $playsinline = $attrs->playsinline()->toBool();
 $srcattr = $attrs->lazyloading()->toBool() ? 'data-src' : 'src';
+$lazy = $attrs->lazyloading()->toBool() ? 'is-lazy' : '';
 ?>
+
 <figure class="<?= $attrs->css() ?>">
-<video style="display: block; width: 100%"
+<video class="<?= $lazy ?>" style="display: block; width: 100%"
     <?php if($autoplay):?> autoplay<?php endif ?>
     <?php if($loop):?> loop<?php endif ?>
     <?php if($muted):?> muted<?php endif ?>
