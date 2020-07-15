@@ -8,6 +8,7 @@ return [
     'editor.blocks.html5video.controls.label'      => 'Steuerelemente anzeigen',
     'editor.blocks.html5video.css.label'           => 'CSS-Klasse',
     'editor.blocks.html5video.label'               => 'HTML5 Video',
+    'editor.blocks.html5video.lazyloading.label'   => 'Lazy Loading',
     'editor.blocks.html5video.link.label'          => 'Link',
     'editor.blocks.html5video.link.placeholder'    => 'http://',
     'editor.blocks.html5video.loop.label'          => 'Loop',

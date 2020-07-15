@@ -1,11 +1,12 @@
 <?php if ($file = $attrs->id()->toFile()): ?>
 <?php
-$files = $page->files()->filterBy('name', $file->name())->filterBy('type', 'video')->shuffle();
+$files = $file->siblings()->filterBy('name', $file->name())->filterBy('type', 'video');
 $autoplay = $attrs->autoplay()->toBool();
 $loop = $attrs->loop()->toBool();
 $muted = $attrs->muted()->toBool();
 $controls = $attrs->controls()->toBool();
 $playsinline = $attrs->playsinline()->toBool();
+$srcattr = $attrs->lazyloading()->toBool() ? 'data-src' : 'src';
 ?>
 <figure class="<?= $attrs->css() ?>">
 <video style="display: block; width: 100%"
@@ -16,7 +17,7 @@ $playsinline = $attrs->playsinline()->toBool();
     <?php if($controls):?> controls<?php endif ?>
 >
 <?php foreach ($files as $file): ?>
-    <source src="<?= $file->url(); ?>" type="video/mp4">
+    <source <?= $srcattr ?>="<?= $file->url(); ?>" type="video/<?= $file->extension(); ?>">
 <?php endforeach ?>
 </video>
 <figcaption><?= $attrs->caption() ?></figcaption>

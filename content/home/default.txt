@@ -3,17 +3,20 @@ Text:
 [
     {
         "attrs": {
-            "guid": "/pages/home/files/video.mov",
-            "src": "http://html5video-block.test/media/pages/home/3445039357-1593530361/video.mov",
-            "id": "home/video.mov",
-            "ratio": 1.380281690140845,
-            "caption": "video caption",
+            "lazyloading": true,
             "autoplay": true,
+            "playsinline": true,
+            "muted": true,
             "loop": true,
-            "css": "small"
+            "controls": false,
+            "guid": "/pages/home/files/video.mp4",
+            "src": "http://html5video-block.test/media/pages/home/2564755167-1594800198/video.mp4",
+            "id": "home/video.mp4",
+            "ratio": 1.380281690140845,
+            "caption": ""
         },
         "content": "",
-        "id": "_ek0wcqeq2",
+        "id": "_xcqtg6kiu",
         "type": "html5video"
     }
 ]

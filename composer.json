@@ -1,5 +1,6 @@
 {
     "name": "phgi/html5video-block",
+    "version": "1.0.0-beta",
     "description": "A block to upload and/or display video files",
     "type": "kirby-plugin",
     "license": "MIT",

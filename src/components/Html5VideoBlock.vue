@@ -66,12 +66,30 @@ export default {
   props: {
     attrs: {
       type: Object,
-      default() {
-        return {};
-      }
     },
     endpoints: Object,
     spellcheck: Boolean
+  },
+  data() {
+    return {
+      defaults: {
+        lazyloading: true,
+        autoplay: true,
+        playsinline: true,
+        muted: true,
+        loop: true,
+        controls: false,
+      }
+    }
+  },
+  created() {
+    console.log(this.defaults);
+    this.$emit("input", {
+      attrs: {
+        ...this.defaults,
+        ...this.attrs
+      }
+    });
   },
   computed: {
     style() {
@@ -91,30 +109,29 @@ export default {
           type: "text",
           icon: "code",
         },
+        lazyloading: {
+          label: this.$t('editor.blocks.html5video.lazyloading.label'),
+          type: "toggle",
+        },
         autoplay: {
           label: this.$t('editor.blocks.html5video.autoplay.label'),
           type: "toggle",
-          default: 1
         },
         playsinline: {
           label: this.$t('editor.blocks.html5video.playsinline.label'),
           type: "toggle",
-          default: 1
         },
         loop: {
           label: this.$t('editor.blocks.html5video.loop.label'),
           type: "toggle",
-          default: 1
         },
         muted: {
           label: this.$t('editor.blocks.html5video.muted.label'),
           type: "toggle",
-          default: 1
         },
         controls: {
           label: this.$t('editor.blocks.html5video.controls.label'),
           type: "toggle",
-          default: 1
         },
       };
     }
